@@ -1,9 +1,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+
     <title>BMI Challenge</title>
     <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">
 
     <script src="src/person.js"></script>
     <script src="src/bmi_calculator.js"></script>
@@ -25,19 +25,20 @@
   <body>
     <div class="row">
       <div class="large-12 columns">
-        <h1>The first wealth is health.</h1>
-        <h3>Ralph Waldo Emerson</h3>
+        <h1>"The first wealth is health."</h1>
+        <h3>~ Ralph Waldo Emerson</h3>
       </div>
-      <form>
-        <input type="text" id="weight" placeholder="Weight">
-        <input type="text" id="height" placeholder="Height">
-        <input type="button" id="calculate" value="Calculate">
-      </form>
-      <div>
-        <span id="display_value"></span>
-        <span id="display_message"></span>
-
-      </div>
+    </div>
+    <div class="row2">
+            <h4>Calculate your BMI </h4>
+        <form>
+          <input type="text" id="weight" placeholder="Weight">
+          <input type="text" id="height" placeholder="Height">
+          <input class="success button" type="button" id="calculate" value="Calculate">
+        </form>
+        <div>
+          <span id="display_value"></span>
+          <span id="display_message"></span>
   </div>
   </body>
 </html>

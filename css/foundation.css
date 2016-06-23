@@ -23,9 +23,7 @@ html {
    * Remove default margin.
    */
 body {
-  margin: 0;
-  background-image: url(../images/friut.jpg);
-  }
+  margin: 0; }
 
 /* HTML5 display definitions
      ========================================================================== */
@@ -122,7 +120,8 @@ dfn {
    */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+  text-align: center;}
 
 /**
    * Address styling not present in IE 8/9.
@@ -377,12 +376,12 @@ html {
 
 body {
   padding: 0;
-  margin: 0;
+  margin: 12% 0;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
-  background: #fefefe;
+  background: url(images/friut.jpg) #ffb60f;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -447,6 +446,11 @@ button {
     margin-left: -0.625rem;
     margin-right: -0.625rem;
     max-width: none; }
+
+    .row2 {
+      margin: 0 40%;
+      background-color: #fff;}
+
     @media screen and (min-width: 40em) {
       .row .row {
         margin-left: -0.9375rem;
@@ -1232,13 +1236,18 @@ h1 {
   font-size: 1.5rem; }
 
 h2 {
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  font-weight: bold;}
 
 h3 {
-  font-size: 1.1875rem; }
+  font-size: 1.1875rem;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;}
 
 h4 {
-  font-size: 1.125rem; }
+  font-size: 1.125rem;
+  text-align: center;}
 
 h5 {
   font-size: 1.0625rem; }
@@ -1497,7 +1506,7 @@ kbd {
       background-color: #5f5f5f;
       color: #fefefe; }
   .button.success {
-    background-color: #3adb76;
+    background-color: #f05634;
     color: #fefefe; }
     .button.success:hover, .button.success:focus {
       background-color: #22bb5b;
