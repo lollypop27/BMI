@@ -381,9 +381,13 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
-  background: url(images/friut.jpg) #ffb60f;
+  background: url(../images/fruit.jpg) #ffb60f no-repeat center center fixed;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
 
 img {
   max-width: 100%;
@@ -449,7 +453,10 @@ button {
 
     .row2 {
       margin: 0 40%;
-      background-color: #fff;}
+      height:185px;
+      background-color: #c9b629;
+      border: solid 1px #585b22;
+      padding: 10px;}
 
     @media screen and (min-width: 40em) {
       .row .row {
@@ -1216,7 +1223,7 @@ h4,
 h5,
 h6 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
   color: inherit;
   text-rendering: optimizeLegibility;
@@ -1233,7 +1240,8 @@ h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 1.5rem; }
+  font-size: 1.2rem;
+  }
 
 h2 {
   font-size: 1.25rem;
@@ -1247,7 +1255,8 @@ h3 {
 
 h4 {
   font-size: 1.125rem;
-  text-align: center;}
+  text-align: center;
+font-weight: bold;}
 
 h5 {
   font-size: 1.0625rem; }
@@ -1507,7 +1516,9 @@ kbd {
       color: #fefefe; }
   .button.success {
     background-color: #f05634;
-    color: #fefefe; }
+    border: solid 1px #c62a1e;
+    color: #fefefe;
+    float: right;}
     .button.success:hover, .button.success:focus {
       background-color: #22bb5b;
       color: #fefefe; }
