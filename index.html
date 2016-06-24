@@ -8,17 +8,36 @@
     <script src="src/person.js"></script>
     <script src="src/bmi_calculator.js"></script>
     <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+
     <script type="text/javascript">
-    $(document).ready(function () {
-      $('#calculate').click(function () {
+    $(document).ready(function(){
+      $('input:radio[name="units"][value="metric"]').prop('checked', true);
+      $('input:radio[name="units"]').change(function(){
+        if($('#metric').is(':checked')) {
+          $("#weight").attr("placeholder", "Weight in kg");
+          $("#height").attr("placeholder", "Height in cm");
+        } else {
+          $("#weight").attr("placeholder", "Weight in lbs");
+          $("#height").attr("placeholder", "Height in inches");
+        }
+      });
+
+      $('#calculate').click(function (){
+        if($('#metric').is(':checked')) {
+          method = "metric"
+        } else if($('#imperial').is(':checked')){
+            method = "imperial"
+        } else {
+            alert("Please choose Metric or Imperial!")
+        }
         var w = parseFloat($('#weight').val());
         var h = parseFloat($('#height').val());
         var person = new Person({weight: w, height: h});
-        person.calculate_bmi();
+        person.calculate_bmi(method);
         $('#display_value').html('Your BMI is ' + person.bmiValue);
         $('#display_message').html('and you are '+ person.bmiMessage);
-      });
-    });
+       });
+     })
   </script>
 
   </head>
@@ -31,6 +50,10 @@
     </div>
     <div class="row2">
             <h4>Calculate your BMI </h4>
+            <p style="text-align:center;">Choose Metric or the Imperial</p>
+            <div><input type="radio" id="metric" value="metric" name="units" />Metric</label>
+                <input type="radio" id="imperial" value="imperial" name="units" />Imperial</label>
+            </div>
         <form>
           <input type="text" id="weight" placeholder="Weight">
           <input type="text" id="height" placeholder="Height">

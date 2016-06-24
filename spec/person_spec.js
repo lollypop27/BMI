@@ -21,7 +21,7 @@ describe("Person", function() {
       expect(person.bmiValue).toEqual(26.01)
     });
 
-    it("should have a BMI Mesaage", function() {
+    it("should have a BMI Mesage", function() {
       person.calculate_bmi("metric");
       expect(person.bmiMessage).toEqual("Overweight")
     });
