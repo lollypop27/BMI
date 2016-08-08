@@ -1,7 +1,7 @@
 describe("BMICalculator", function() {
   var bmi_calculator;
   var person;
-describe("Metric method", function() {
+describe("Metric", function() {
   beforeEach(function() {
     person = new Person({weight: 90, height: 186});
     calculator = new BMICalculator();
@@ -11,7 +11,7 @@ describe("Metric method", function() {
     expect(person.bmiValue).toEqual(26.01);
   });
 })
-describe("Imperial method", function() {
+describe("Imperial", function() {
   beforeEach(function() {
     person = new Person({weight: 198, height: 73});
     calculator = new BMICalculator();
