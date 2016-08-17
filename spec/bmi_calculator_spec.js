@@ -10,7 +10,7 @@ describe("Metric", function() {
     calculator.metric_bmi(person);
     expect(person.bmiValue).toEqual(26.01);
   });
-})
+});
 describe("Imperial", function() {
   beforeEach(function() {
     person = new Person({weight: 198, height: 73});
@@ -18,7 +18,7 @@ describe("Imperial", function() {
   });
   it("calculates BMI for a person using Imperial method", function() {
     calculator.imperial_bmi(person);
-    expect(person.bmiValue).toEqual(26.12);
+    expect(person.bmiValue).toEqual(371.55);
   });
-})
+});
 });

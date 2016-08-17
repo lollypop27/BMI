@@ -18,12 +18,12 @@ describe("Person", function() {
 
     it("should calculate BMI value", function() {
       person.calculate_bmi("metric");
-      expect(person.bmiValue).toEqual(26.01)
+      expect(person.bmiValue).toEqual(26.01);
     });
 
     it("should have a BMI Mesage", function() {
       person.calculate_bmi("metric");
-      expect(person.bmiMessage).toEqual("Overweight")
+      expect(person.bmiMessage).toEqual("Overweight");
     });
   });
 });
@@ -45,12 +45,12 @@ describe("Imperial", function() {
 
   it("should calculate BMI value", function() {
     person.calculate_bmi("imperial");
-    expect(person.bmiValue).toEqual(26.12)
+    expect(person.bmiValue).toEqual(371.55);
   });
 
   it("should have a BMI Mesaage", function() {
     person.calculate_bmi("imperial");
-    expect(person.bmiMessage).toEqual("Overweight")
+    expect(person.bmiMessage).toEqual("Obese");
   });
 
 });
